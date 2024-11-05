@@ -1,0 +1,29 @@
+.InvitationPage {
+    background-color: white;
+    height: 30000px;
+    border-radius: 15px 0 0 0 ;
+    >ul{
+        list-style: none;
+        display: flex;
+        padding: 10px 30px;
+        border-bottom: 1px solid rgb(245, 195, 108);
+
+        >li{
+            border: 1px solid rgb(245, 195, 108);
+           padding: 0 10px;
+           border-radius: 5px;
+           color: rgb(220, 140, 0);
+           cursor: pointer;
+        }
+        >li+li{
+            margin-left: 10px;
+
+        }
+
+        
+    }
+}
+.activeA{
+    color: rgb(255, 255, 255);
+    background-color: rgb(245, 195, 108);
+}

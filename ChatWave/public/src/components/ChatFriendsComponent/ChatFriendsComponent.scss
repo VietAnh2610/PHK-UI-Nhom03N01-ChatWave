@@ -1,0 +1,318 @@
+.ChatFriendsComponent-item {
+ 
+  .ChatFriendsComponent-item-header {
+      background-image: linear-gradient(rgb(252, 208, 126), rgb(255, 253, 247));
+      padding: 0 12px;
+  }
+  .ChatFriendsComponent-item-header-right {
+      i {
+          font-size: 18px;
+          cursor: pointer;
+      }
+      i+i {
+          margin-left: 10px;
+      }
+  }
+}
+.chatfriends-img {
+  width: 45px;
+  height: 45px;
+  // margin-left: 10px;
+}
+.ChatFriendsComponent-item + .ChatFriendsComponent-item {
+  border-left:  1px solid rgb(252, 246, 235);
+}
+.ChatFriendsComponent-item-body {
+  // margin-left: 12px;
+  // padding: 10px;
+  display: flex;
+  flex-direction: column;
+  .ChatFriendsComponent-time {
+      margin:  0 auto;
+      background-color: rgb(255, 197, 89);
+      color: white;
+      padding: 0px 20px;
+      border-radius: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+}
+.ChatFriendsComponent-item-bottom {
+  height: 100%;
+  // margin-left: 12px;
+
+}
+.ChatFriendsComponent-content-chat-item {
+  display: flex;
+  padding: 0 10px;
+  >img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+  }
+  > p{
+     
+      margin: 0;
+      margin-left: 7px;
+      background-color: rgb(255, 224, 233);
+      padding: 3px 10px;
+      border-radius: 10px;
+      cursor: pointer;
+  }
+}
+
+  .ChatFriendsComponent-content-chat-item-me {
+  width: 100%;
+ 
+  height: 40px;
+  border-radius: 10px;   
+  padding: 0 10px;
+  border-radius: 10px;
+  margin: 0;
+  > p {
+      border-radius: 10px;
+      margin: 0;
+      padding: 5px 10px;
+      float: right;
+      background-color: rgb(250, 237, 215);
+      cursor: pointer;
+  }
+
+}
+.ChatFriendsComponent-content {
+  height: 780px;
+  width: 100%;
+  padding-bottom: 20px;
+  overflow-y: auto;
+}
+::-webkit-scrollbar {
+  width: 3px; 
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+.ChatFriendsComponent-item-bottom {
+  flex: 1;
+
+}
+
+.ChatFriendsComponent-item-bottom-icon {
+  border-top: 1px solid rgb(250, 237, 215);
+  border-bottom: 1px solid rgb(250, 237, 215);
+  height: 4%;
+
+  .ChatFriendsComponent-item-bottom-icon-left {
+      padding: 0 15px;
+      width: 40%;
+      border-right: 1px solid rgb(250, 237, 215);
+      > i {
+          color: rgb(130, 130, 130);
+          cursor: pointer;
+      }
+      display: flex;
+      align-items: center;
+
+      i + i {
+          margin-left: 10px;
+      }
+  }
+  .ChatFriendsComponent-item-bottom-icon-right {
+          color: rgb(130, 130, 130);
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 0 5px;
+      > i {
+          margin-right: 10px;
+          cursor: pointer;
+      }
+      > span {
+          font-size: 13px;
+      }
+  }
+}
+.ChatFriendsComponent-item-bottom-message {
+  height: 6%;
+  height: 40px;
+}
+.ChatFriendsComponent-item-bottom-message-left {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  > input {
+      width: 100%;
+      height: 100%;
+      padding: 0 15px;
+      border: none;
+      &:focus {
+          outline: none;
+      }
+  }
+  > i {
+      color: rgb(252, 186, 18);
+      font-size: 20px;
+      cursor: pointer;
+  }
+}
+.ChatFriendsComponent-item-bottom-message-right {
+  display: flex;
+ 
+  flex: 1;
+  justify-content: center;
+  > i {
+      font-size: 20px;
+      color: rgb(252, 186, 18);
+      cursor: pointer;
+  }
+}
+.ChatFriendsComponent {
+  height: 90vh;
+  border-right: 2px solid rgb(245, 195, 108);
+  position: relative; // Đảm bảo vị trí tương đối cho các phần tử con
+
+}
+
+.ChatFriendsComponent-popup {
+  position: absolute;
+  z-index: 1000;
+  margin-bottom: 120px;
+}
+
+.ChatFriendsComponent-popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 145%;
+}
+
+.Suggest-bot-chatfriendcomponents{
+  display: flex;
+  width: 100%;
+}
+
+.Suggest-bot-chatfriendcomponents-left{
+  width: 80%;
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+.Suggest-bot-chatfriendcomponents-left h6{
+  padding: 10px;    
+  color:gray
+}
+
+.Suggest-bot-chatfriendcomponents-right{
+  width: 20%;
+}
+
+.another-suggest-botchat{
+  display: flex;
+}
+.another-suggest-botchat-left {
+  width: 90%;
+}
+.another-suggest-botchat-left button{
+  background-color: #ffe4b4;
+  border-radius: 20px;
+  border: 1px solid #ffe4b4;
+  height: 30px;  
+  padding: 5px;  
+  font-size: 13px;
+  align-items: center;
+  flex-direction: column;
+  margin: 5px;
+}
+.another-suggest-botchat-right{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.ChatFriendsComponent-tags-popup {
+  border: 1px solid orange;
+  background-color: white;
+  position: absolute;
+ 
+}
+.ChatFriendsComponent-tags-popup-content{
+  display: flex;
+}
+.item-tag-chat{
+display: flex;
+padding-right: 5px;
+}
+
+.header-ellipsis-popup{
+  text-align: center;
+  padding: 20px 0px;
+  border-bottom: 1px solid orange;
+}
+
+.informatuon-ellipsis-popup{
+  display: flex;
+  border-bottom: 1px solid orange;
+}
+
+.item-inf-ellipsis-popup{
+  display: flex;
+  padding: 20px;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-inf-ellipsis-popup h4{
+  margin: 0px;
+}
+
+.content-ellipsis-popup{
+  max-height: 650px; /* Chiều cao tối đa của phần tử chứa, bạn có thể điều chỉnh theo nhu cầu */
+  overflow-y: auto;  /* Hiển thị thanh cuộn dọc khi nội dung vượt quá chiều cao */
+  border: 1px solid #ddd; /* Thêm viền để làm nổi bật phần tử chứa */
+  box-sizing: border-box; /* Đảm bảo padding và border được tính trong chiều cao */
+}
+
+.item-content-ellipsis-popup{
+  padding: 20px;
+  display: flex;
+  border-bottom: 1px solid orange;
+  align-items: center;
+  gap: 10px  ;
+  flex-wrap: wrap; /* Cho phép các phần tử tự động xuống dòng */
+
+}
+
+.item-content-ellipsis-popup h4{
+  margin: 0px;
+}
+
+.item-link-ellipsis-popup{
+  display: flex;
+}
+
+.item-link-ellipsis-popup-img{
+  width: 25%;
+}
+
+.item-link-ellipsis-popup-inf{
+  width: 75%;
+  padding: 5px;
+}
+
+.security-ellipsis-popup{
+  display: flex;
+  gap: 10px;
+}
+.ChatFriendsComponent-tags-popup-content {
+  display: flex;
+  justify-content: center;
+}
+.item-tag-chat {
+  display: flex;
+  align-items: center;
+ 
+  img {
+    width: 20px;
+  }
+}

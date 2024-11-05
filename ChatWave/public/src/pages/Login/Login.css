@@ -1,0 +1,95 @@
+.login {
+    align-items: center;
+   height: 100vh;
+    background-image: url('../../assets/bglogin.png'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-img {
+    width: 100%;
+    border-radius: 25px 0 0 25px;
+}
+.login-right {
+    background-color: white;
+    border-radius:  0 25px 25px 0;
+}
+.login-right > img {
+    width: 200px;
+    border-radius: 25px;
+    float: right;
+}
+.input-item > input {
+    width: 90%;
+    margin-top: 25px;
+    height: 50px;
+    border-radius: 40px;
+    padding: 32px 38px;
+    border: none;
+    border: 2px solid #939090;
+    position: relative;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.input-item > input:focus {
+    outline: none;
+}
+
+.input-item > input:focus {
+    outline: none;
+    border-color: #F5C46A; /* Màu border khi focus */
+   
+}
+
+.input-item {
+    position: relative;
+}
+
+.b {
+    position: absolute;
+    background-color: white;
+    color: rgb(117, 117, 117);
+    top: 47px;
+    left: 60px;
+    z-index: 1000;
+    padding: 0 7px;
+    transition: top .5s ease; 
+}
+
+/* .input-item > input:focus + .b {
+    top: 9px; 
+} */
+.input-item > input:hover + .b {
+    top: 9px; 
+}
+.b:hover {
+    top :9px;
+}
+.active1 {
+    top: 9px;  
+}
+.button-login {
+    width: 90%;
+    margin: 0 auto;
+    background-image: linear-gradient(to right, #F5C46A , #FA8DAE);
+    border: none;
+    height: 60px;
+    margin-top: 25px;
+    border-radius: 30px;
+    font-size: 19px;
+    color: white;
+    font-weight: 600;
+   
+}
+.button-login:hover {
+    background-image: linear-gradient(to left, #F5C46A , #FA8DAE);
+}
+.fassignIn {
+position:  absolute;
+left: -60px;
+color: #939090;
+margin-top: 5px; 
+}

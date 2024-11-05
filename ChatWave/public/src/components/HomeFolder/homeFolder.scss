@@ -1,0 +1,85 @@
+.header123{
+    display: flex;
+    height: 50px;
+}
+
+.homefolder-header1{
+    width: 20%;
+    display: flex;
+    padding: 10px;
+    background: #30c651;
+    margin: 10px 10px;
+    border-radius: 10px;
+}
+
+.homefolder-header1-left{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homefolder-header1-left h6{
+    margin: none ;
+    color: white;
+}
+
+.homefolder-header1-right{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.homefolder-header2{
+    width:52%;
+}
+
+.homefolder-header3{
+    width: 35%;
+    display: flex;
+}
+.menu-right-11,.menu-right-22{
+    position: relative;
+    flex: 1;
+    text-align: center;
+    align-items: center;
+}
+
+.menu-tag-add1{
+    position: absolute;
+    top: 10px;
+    text-align: center;
+    align-items: center;
+    border: 1px solid #fa8dae;
+    border-radius: 7px;
+    width: 150px;
+    height: 25px;
+    color: #fa8dae;
+}
+
+.menu-right-22{
+    display: flex;
+}
+
+.menu-right-22 .menu-tag-add1{
+ left: 80px;
+    width: 70px;
+}
+
+.menu-right-22 h5{
+    margin-bottom: none;
+   
+    margin-right: 30px;
+}
+
+.container-homefolder-header{
+    background:#30c651 ;
+    width: 90%;
+    height: 20px;
+    display: flex;
+    
+}
+
+.content-homefolder{
+    padding: 30px;
+}

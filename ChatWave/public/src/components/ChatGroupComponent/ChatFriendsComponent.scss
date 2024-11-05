@@ -1,0 +1,203 @@
+.ChatGroupComponent {
+  height: 90vh;
+  border-right: 2px solid rgb(245, 195, 108);
+  position: relative; /* Tạo vị trí tương đối cho các phần tử con */
+
+  .ChatGroupComponent-item {
+    .ChatGroupComponent-item-header {
+      background-image: linear-gradient(rgb(252, 208, 126), rgb(255, 253, 247));
+      padding: 0 12px;
+    }
+
+    .ChatGroupComponent-item-header-right {
+      i {
+        font-size: 18px;
+        cursor: pointer;
+      }
+      i + i {
+        margin-left: 10px;
+      }
+    }
+
+    .ChatGroupComponent-item-body {
+      display: flex;
+      flex-direction: column;
+      
+      .ChatGroupComponent-time {
+        margin: 0 auto;
+        background-color: rgb(255, 197, 89);
+        color: white;
+        padding: 0px 20px;
+        border-radius: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .ChatGroupComponent-item-bottom {
+      height: 100%;
+
+      .ChatGroupComponent-item-bottom-icon {
+        border-top: 1px solid rgb(250, 237, 215);
+        border-bottom: 1px solid rgb(250, 237, 215);
+        height: 4%;
+
+        .ChatGroupComponent-item-bottom-icon-left {
+          padding: 0 15px;
+          width: 40%;
+          border-right: 1px solid rgb(250, 237, 215);
+          display: flex;
+          align-items: center;
+
+          > i {
+            color: rgb(130, 130, 130);
+            cursor: pointer;
+          }
+
+          i + i {
+            margin-left: 10px;
+          }
+        }
+
+        .ChatGroupComponent-item-bottom-icon-right {
+          color: rgb(130, 130, 130);
+          flex: 1;
+          display: flex;
+          align-items: center;
+          padding: 0 5px;
+
+          > i {
+            margin-right: 10px;
+            cursor: pointer;
+          }
+
+          > span {
+            font-size: 13px;
+          }
+        }
+      }
+
+      .ChatGroupComponent-item-bottom-message {
+        height: 6%;
+        height: 40px;
+
+        .ChatGroupComponent-item-bottom-message-left {
+          width: 90%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+
+          > input {
+            width: 100%;
+            height: 100%;
+            padding: 0 15px;
+            border: none;
+            &:focus {
+              outline: none;
+            }
+          }
+
+          > i {
+            color: rgb(252, 186, 18);
+            font-size: 20px;
+            cursor: pointer;
+          }
+        }
+
+        .ChatGroupComponent-item-bottom-message-right {
+          display: flex;
+          flex: 1;
+          justify-content: center;
+
+          > i {
+            font-size: 20px;
+            color: rgb(252, 186, 18);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .ChatGroupComponent-content {
+      height: 780px;
+      width: 100%;
+      padding-bottom: 20px;
+      overflow-y: auto;
+
+      .ChatGroupComponent-content-chat-item {
+        display: flex;
+        padding: 0 10px;
+
+        > img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+        }
+
+        > p {
+          margin: 0;
+          margin-left: 7px;
+          background-color: rgb(255, 224, 233);
+          padding: 3px 10px;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+      }
+
+      .ChatGroupComponent-content-chat-item-me {
+        width: 100%;
+        height: 40px;
+        border-radius: 10px;
+        padding: 0 10px;
+        margin: 0;
+
+        > p {
+          border-radius: 10px;
+          margin: 0;
+          padding: 5px 10px;
+          float: right;
+          background-color: rgb(250, 237, 215);
+          cursor: pointer;
+        }
+      }
+    }
+
+    .ChatGroupComponent-item-bottom-message-left {
+      position: relative; /* Tạo khối tương đối cho picker */
+    }
+
+    .emoji-picker-react {
+      position: absolute; /* Vị trí tuyệt đối để di chuyển picker */
+      bottom: 60px; /* Di chuyển picker lên trên so với vị trí nhập */
+      left: 0; /* Căn trái */
+      z-index: 10; /* Đảm bảo picker nằm trên các phần tử khác */
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Thêm bóng cho picker */
+      border-radius: 8px; /* Bo góc cho picker */
+    }
+
+    .emoji-picker-react .emoji-categories {
+      justify-content: space-around;
+    }
+
+    .emoji-picker-react .emoji-group:before {
+      background-color: transparent; /* Bỏ nền của tiêu đề nhóm */
+    }
+
+    .chat-file-message {
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      padding: 5px 10px;
+      margin: 5px 0;
+    }
+
+    .chat-file-message a {
+      text-decoration: none;
+      color: #007bff;
+    }
+  }
+
+  .chatgroup-img {
+    width: 45px;
+    height: 45px;
+  }
+}

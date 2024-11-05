@@ -1,0 +1,26 @@
+.HomeAll-top-left {
+    p + p {
+        margin-left: 25px;
+        padding: 0;
+    }
+    > p > span {
+        color: #f86c96;
+        font-weight: 600;
+    }
+}
+.HomeAll-top-right {
+    align-items: center;
+    p {
+        margin-right: 10px;
+        
+    }
+    > select {
+        margin-top: -17px;
+        border-radius: 10px;
+        color: #f45484;
+        font-weight: 600;
+        &:focus {
+            outline: none;
+        }
+    }
+}

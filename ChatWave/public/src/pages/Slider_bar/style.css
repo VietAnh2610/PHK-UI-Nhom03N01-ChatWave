@@ -1,0 +1,102 @@
+.Slide_bar {
+    width: 100%;
+    height: 1024px;
+    background-color: #F5C46A !important;
+    
+  }
+
+  
+  
+  .sb_item {
+    height: 1024px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    background-image: linear-gradient(to bottom, #F5C46A , #FA8DAE) !important;
+    margin-top: 2px;
+
+  }
+  .sb_item  > ul {
+    border: none;
+  }
+  .ant-menu  {
+    border: none;
+  }
+  
+  .Slider_text {
+    width: 45px;
+    height: 24px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8767E1;
+    margin-left: 25px;
+    margin-top: 24px;
+  }
+  
+  .Slide_bar .sb_item .ant-menu-item .ant-menu-item-icon {
+    font-size: 28px !important; /* Tăng kích thước font cho các icon */
+    color: white;
+    font-weight: 600;
+  }
+ 
+  .Slide_bar .sb_item .ant-menu-item {
+    line-height: 32px !important; /* Điều chỉnh dòng cho phù hợp với kích thước icon */
+    margin-bottom: 16px; /* Tăng khoảng cách giữa các mục menu */
+  }
+  
+  .Slide_bar .sb_item .ant-menu-item:last-child {
+    color: #eb4e7d;
+
+  }
+  
+  .custom-header {
+    background-image: linear-gradient(to right, #F5C46A , #FA8DAE) !important;
+  }
+  
+  /* Ghi đè màu nền của Header từ Ant Design */
+  .ant-layout-header {
+    background-color: #F5C46A !important;
+  }
+
+
+
+  /* Thêm CSS để bỏ border cho Menu của Ant Design */
+.sb_item .ant-menu {
+  border-right: none; /* Bỏ border bên phải */
+}
+
+.sb_item .ant-menu-item {
+  border-bottom: none; /* Bỏ border dưới của mỗi item */
+}
+
+/* Căn giữa icon trong Menu theo chiều ngang */
+.sb_item .ant-menu-item .anticon {
+  vertical-align: middle; /* Căn giữa theo chiều dọc */
+  margin-right: 8px; /* Khoảng cách với nội dung bên phải */
+}
+
+
+.Slide_bar .sb_item .ant-menu-item-selected .ant-menu-item-icon {
+  
+color:#eb4e7d 
+
+
+}
+
+
+.sb_item .ant-menu-item-selected {
+  background-color: #fff; /* Xóa màu nền khi item được chọn */
+}
+.sb_item .ant-menu-item > .anticon {
+  margin-left: -5px;
+  margin-top: 3px;
+}
+.sb_item .ant-menu-item {
+  color: #ffffff; 
+}

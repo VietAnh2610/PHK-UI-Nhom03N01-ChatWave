@@ -1,0 +1,166 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 100%;
+  .Header-left {
+    h2 {
+      margin: 0;
+      background: linear-gradient(90deg, #e6a327, #FA8DAE);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  }
+
+  .Header-center {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+
+    i {
+      margin-left: 10px;
+    }
+  }
+
+  .Header-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+
+    > i {
+      color: white;
+      cursor: pointer;
+    }
+
+    i + i {
+      margin-left: 10px;
+    }
+
+    img {
+      width: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      margin-right: 15px;
+    }
+
+    .popover {
+      position: absolute;
+      top: 0px; /* Đặt cách phần trên của header 50px */
+      right: 0px; /* Đặt cách phải 20px */
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      width: 200px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+
+      h6 {
+        margin: 10px 0;
+        cursor: pointer;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: orange;
+        }
+      }
+    }
+  }
+}
+
+.header-component-inf-container {
+  display: flex;
+}
+
+.popover .close-link {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: orange;
+  }
+}
+
+.line {
+  border-top: 1px solid black;
+}
+
+.setting-container-item {
+  padding-top: 10px;
+  display: flex;
+}
+
+.setting-container-item-left {
+  padding-right: 10px;
+}
+
+.setting-container-item-right {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.background-user {
+  background: #d5e3fe;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 200px; // Chiều cao của phần nền
+  position: relative; // Để đặt các phần tử bên trong một cách tương đối
+}
+
+.avt-user {
+  width: 150px; // Kích thước avatar
+  height: 150px;
+  border-radius: 50%; // Bo tròn
+  border: 4px solid white; // Đường viền trắng
+  background-image: url('https://moc247.com/wp-content/uploads/2023/12/loa-mat-voi-101-hinh-anh-avatar-meo-cute-dang-yeu-dep-mat_2.jpg'); // Đường dẫn tới ảnh avatar
+  background-size: cover;
+  background-position: center;
+  position: absolute; // Vị trí tuyệt đối để đè lên nền
+  bottom: -50px; // Đặt avatar chạm vào cạnh dưới của phần nền
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.user-info {
+  text-align: center;
+  margin-top: 60px; // Để đảm bảo phần thông tin người dùng không bị chạm vào avatar
+
+  h5 {
+    margin: 10px 0 0 0;
+  }
+
+  p {
+    margin: 0;
+    color: gray;
+  }
+}
+
+.emoji {
+  font-size: 24px; // Kích thước của biểu tượng
+  margin-left: 10px; // Khoảng cách giữa biểu tượng và phần tử khác
+}
+
+.user-item {
+  display: flex;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.user-item-left {
+  width: 45%;
+  margin-right: 20px;
+}
+
+.user-item-right {
+  width: 55%;
+  color: blue;
+}

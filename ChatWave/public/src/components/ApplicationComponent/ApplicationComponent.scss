@@ -1,0 +1,125 @@
+.avatar1 {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+.avatar1 {
+    transition: all 0.3s ease;
+}
+
+.avatar1:hover {
+    transform: scale(1.1);
+    border: 3px solid rgb(245, 196, 105);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.MyApplicationComponent{
+    margin-left: 45px;
+    margin-top: 20px;
+}
+
+.header{
+    display: flex;
+}
+
+.actions {
+    display: flex;
+    margin-top: 20px ;
+
+    .btn {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      padding: 10px 20px;
+      margin: 0 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+
+      &:hover {
+        background-color: #f1f1f1;
+      }
+
+      svg {
+        margin-right: 5px;
+      }
+    }
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 2px solid #F8B133;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    max-width: 1500px;
+    margin-top: 40px ;
+    
+    .search-icon {
+        font-size: 20px;
+        margin-right: 10px;
+        color: #000;
+    }
+      
+    .search-input {
+        border: none;
+        outline: none;
+        flex: 1;
+        font-size: 16px;
+    }
+      
+    .search-input::placeholder {
+        color: #888;
+    }
+}
+  
+.recommended-apps {
+    margin-top: 40px;
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .apps {
+      display: flex;
+      flex-wrap: wrap;
+
+      .app-card {
+        width: 360px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+
+        .trello{
+            display: flex;
+        }
+        }
+
+        .btn1 {
+            background-color: white;
+            color: #FF007F; // Màu hồng đậm cho chữ
+            border: 1px solid #ccc; // Màu xám nhạt cho viền
+            border-radius: 10px; // Bo góc
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+            width: 320px;
+            margin-top: 20px;
+          
+            &:hover {
+              background-color: #f7f7f7; // Màu nền khi hover
+            }
+          }
+          
+      }
+    }
+    

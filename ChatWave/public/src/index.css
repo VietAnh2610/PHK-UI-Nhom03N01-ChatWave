@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+button,
+input {
+  /* Chọn một trong hai font làm mặc định */
+  font-family: "Quicksand", sans-serif; /* hoặc font-family: "Work Sans", sans-serif; */
+}
+
+body {
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.Toastify__toast-theme--dark {
+  background-color: #00000076 !important;
+}
+
+/* Override Ant Design font settings */
+.ant-typography,
+.ant-btn,
+.ant-input,
+.ant-menu,
+.ant-layout {
+  font-family: "Quicksand", sans-serif !important; /* hoặc font-family: "Work Sans", sans-serif !important; */
+}
