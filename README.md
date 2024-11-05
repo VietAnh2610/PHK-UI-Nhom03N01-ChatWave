@@ -9,9 +9,7 @@ ChatWave là một ứng dụng mạng xã hội nhắn tin đa chức năng, đ
 - [Lý Do Chọn Giải Pháp Thiết Kế](#lý-do-chọn-giải-pháp-thiết-kế)
 - [Chức Năng Chính Của Ứng Dụng](#chức-năng-chính-của-ứng-dụng)
 - [Cài Đặt](#cài-đặt)
-- [Sử Dụng](#sử-dụng)
-- [Đóng Góp](#đóng-góp)
-- [License](#license)
+
 
 ## Giới Thiệu
 
