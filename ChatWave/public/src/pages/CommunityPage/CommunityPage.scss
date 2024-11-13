@@ -1,0 +1,40 @@
+.CommunityPage {
+    background-color: #fff;
+    height: 100vh;
+    border-radius: 15px;
+   
+}
+.CommunityPage-header {
+    margin: 0 3px;
+    border-bottom: 1px solid rgb(245, 196, 105);
+    height: 40px;
+    > ul {
+        display: flex;
+        height: 36px;
+        align-items: center;
+        
+        list-style: none;
+        > li {
+            padding: 10px 15px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        > li + li{
+        margin-left: 30px;
+
+        }
+    }
+    ul > li:last-child {
+        display: block;
+        align-items: center;
+        > i {
+            position: absolute;
+            margin-left: 3px;
+            margin-top: 2px;
+        }
+    }
+}
+.active_community {
+    color: rgb(238, 101, 142);
+    border-bottom: 2px solid rgb(255, 0, 77);
+}

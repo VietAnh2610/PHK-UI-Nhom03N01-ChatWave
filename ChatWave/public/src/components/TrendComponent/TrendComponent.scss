@@ -1,0 +1,132 @@
+.trend-list-item {
+    background-color:rgb(99, 4, 9);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 5px;
+    width: 18%;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    &:hover{
+        transform: scale(1.05);
+    }
+    >img {
+        width: 40px;
+        height: 40px;
+        border-radius: 3px;
+    }
+    p
+    {
+        display: flex;
+        align-items: center;
+        color: #fff;
+
+        > span {
+
+            margin-right: 10px;
+            color: #fff;
+            font-size: 12px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: rgb(150, 18, 25);
+        }
+    }
+}
+.channel {
+    display: flex;
+    justify-content: space-between;
+}
+.channel-item {
+    background-color: rgb(247, 237, 240);
+    border-radius: 5px;
+    width: 23%;
+    padding: 15px;
+    .channel-content {
+        &:hover {
+            .image-c {
+                display: none;
+                opacity: 0;
+            }
+            .image-p {
+                display: block;
+                opacity: 1;
+            }
+
+        }
+        height: 300px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px;
+        background-color: rgb(245, 220, 228);
+        position: relative;
+     .image-c {
+        transition: opacity 0.5s ease-in-out;
+
+     }
+        .image-p {
+            width: 100%;
+            height: 280px;
+            transition: opacity 0.5s ease-in-out;
+display: none;
+           
+        }
+        .image-c {
+            transition: opacity 0.5s ease-in-out;
+
+        }
+        > img {
+            width: 100%;
+            height: 280px;
+            margin: 0 auto;
+        }
+        > a {
+            color: blue;
+        }
+    }
+}
+.channel-cpn-right {
+    > p {
+        margin: 0;
+        padding: 0;
+        color: rgb(252, 86, 136);
+    }
+}
+.Trendcomment {
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 6px;
+    .Trendcomment-left {
+        align-items: center;
+        > p {
+            margin: 0;
+            align-items: center;
+            margin-left: 7px;
+        font-size: 13px;
+        }
+       
+}
+.Trendcomment-right {
+    align-items: center;
+    > img {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        position: relative;
+    }
+    > img:nth-child(2) {
+        position: absolute;
+        margin-left: -10px;
+    }
+    > img:nth-child(1) {
+        position: absolute;
+        margin-left: -20px;
+    }
+}
+}

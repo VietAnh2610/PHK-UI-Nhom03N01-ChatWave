@@ -1,0 +1,44 @@
+.avatar-homeAll {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+.infoInvitation {
+    > h1{
+        font-size: 15px;
+        font-weight: 600;
+    }
+    margin-top: 5px;
+    margin-left: 10px;
+    
+}
+.infoInvitation_item   {
+    border-radius: 10px;
+    background-color: rgb(255, 227, 174);
+    margin-left: 40px;
+    
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.avatar-homeAll {
+    transition: all 0.3s ease;
+}
+.avatar-homeAll:hover {
+    transform: scale(1.1);
+    border: 3px solid rgb(245, 196, 105);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.infoInvitation-header-down>button{
+    background-color: white;
+    border-radius: 15px;
+    padding: 0px 20px;
+    width: 215px;
+}
+
+.btn:hover{
+    color: #f45484 !important;
+    background-color: white !important;
+}
+

@@ -1,0 +1,37 @@
+.avatar-homeAll {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+.infoUser {
+    > h1{
+        font-size: 15px;
+        font-weight: 600;
+    }
+    margin-top: 5px;
+    margin-left: 10px;
+    
+}
+.infoUser_item   {
+  cursor: pointer;
+}
+.avatar-homeAll {
+    transition: all 0.3s ease;
+}
+.avatar-homeAll:hover {
+    transform: scale(1.1);
+    border: 3px solid rgb(245, 196, 105);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.quality_unreaf {
+    width: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15px;
+    background-color: #ec215e;
+    color: white;
+    margin-left: 10px;
+}

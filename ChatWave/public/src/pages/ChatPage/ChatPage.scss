@@ -1,0 +1,109 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.ChatPage {
+    background-color: white;
+    height: 30000px;
+    border-radius: 15px 0 0 0 ;
+    .ChatPage-header {
+       
+        ul {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            // background-color: rgb(252, 207, 124);
+            list-style: none;
+            border-bottom: 1px solid rgb(252, 207, 124);
+            > li {
+                cursor: pointer;
+                // background-color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+                
+                width: 13%;
+                border-radius:  0 0 0 10px;
+                > img {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    margin-right: 5px;
+                }
+            }
+            > li + li {
+                border-left: 1px solid rgb(252, 207, 124);
+
+            }
+            >li:first-child {
+                border-radius:  15px 0 0 0;
+            }
+            >li:nth-child(6) {
+                border-radius:  0 0 0 10px;
+                > i {
+                margin-left: -20px;
+                margin-left: -83px;
+                padding: 2px;
+                color: rgb(252, 207, 124);
+                font-size: 10px;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                border: 1px solid rgb(252, 207, 124);
+                }
+            }
+
+        }
+    }
+}
+.active-chat {
+    background-color:rgb(252, 207, 124) ;
+    color: white;
+}
+
+.window-chat-item {
+    width: 33%;
+}
+
+.no-chat-active {
+    > h4 {
+        font-size: 20px;
+    }
+    > P {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    text-align: center;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 120px;
+ 
+   .slide-item {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    > h3 {
+        font-size: 18px;
+        padding: 10px;
+        font-weight: 600;
+        color: rgb(245, 196, 105);
+    }
+    > p {
+        margin-bottom: 30px;
+    }
+    > img {
+        margin: 0 auto;
+        width: 400px;
+    }
+   }
+}
+
+.slick-dots li button:before {
+    font-size: 11px; /* Adjust the size here */
+    color: #999;     /* Color of inactive dots */
+}
+
+.slick-dots li.slick-active button:before {
+    color: #f45484;  /* Color of active dot */
+}

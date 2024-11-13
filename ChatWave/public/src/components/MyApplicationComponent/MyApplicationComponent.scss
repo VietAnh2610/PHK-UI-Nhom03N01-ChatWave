@@ -1,0 +1,261 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.myappall {
+    display: flex;
+    height: 100vh;
+    font-size: 14px;
+  }
+  
+
+  
+  .myapp-left {
+    >a {
+  font-size: 14px;
+
+}
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid orange;
+   
+  }
+  .myapp-left h5 {
+    font-size: 14px;
+    margin-top: 10px;
+    padding-left: 10px;
+  }
+    .header-myapp-left {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    justify-content:space-around ;
+    padding: 10px;
+    height: 50px;
+    background: #fff4e0;
+  }
+
+  .inf-myappleft{
+    display: flex;
+    
+
+  }
+  .icon-myappleft {
+    display: flex;
+
+
+    margin-left: auto; /* Push icons to the right end */
+  }
+
+  .content-myapp-left{
+    padding-top: 10px;
+    padding: 10px;
+
+  }
+
+  .item-content-myapp-left{
+    display: flex;
+    padding-bottom: 10px;
+    
+  }
+  
+  .myapp-middle{
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-myapp-middle{
+    display: flex;
+    height: 50px;
+    background: #fff4e0;
+  }
+  
+  .header-myapp-middle-filename{
+    width: 70%;
+    padding: 5px 10px;
+    color: #ff004d;
+  }
+
+  .header-myapp-middle-filename h5{
+    font-size: 15px;
+    margin-top: 10px;
+    padding-left: 10px;
+  }
+  .header-myapp-middle-search{
+    display: flex;
+    padding: 5px;
+    width: 30%;
+  }
+  .search-bar1 {
+    display: flex;
+    align-items: center;
+    border: 2px solid #F8B133;
+    border-radius: 5px;
+    padding: 5px;
+    width: auto;
+    max-width: 1500px;
+    
+    
+    .search-icon1 {
+        font-size: 20px;
+        margin-right: 10px;
+        color: #000;
+    }
+      
+    .search-input1 {
+        border: none;
+        outline: none;
+        flex: 1;
+        font-size: 16px;
+    }
+      
+    .search-input1::placeholder {
+        color: #888;
+    }
+}
+
+  .menu-myapp-middle{
+    display: flex;
+    height: 40px;
+    border-bottom: 1px solid orange;
+  }
+
+  .item-menu-myapp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+  }
+
+  .item-menu-myapp h5{
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .content1-myapp-middle{
+    
+
+  }
+
+  .content-1-1-myapp-middle{
+    h1 {
+      font-size: 36px;
+    }
+    padding: 20px;
+    display: flex;
+  }
+
+  .content-1-2-myapp-middle{
+    > span > h1{
+      font-size: 25px;
+    }
+    > h1 {
+      font-size: 20px;
+
+    }
+    padding: 0px 20px;
+    border-bottom: 1px solid orange;
+  }
+
+  .content2-1-myapp-middle{
+    padding: 10px 20px;
+    display: flex;
+  }
+
+  .icon-content2-1-myapp-middle{
+    padding-right: 10px;
+  }
+
+  .chat-content2-2-myapp-middle{
+    > h5 {
+      font-size: 16px;
+    }
+    width: 95%;
+    background: #fff7f7;
+    padding: 0px 10px;
+    border-radius: 10px;
+  }
+  .connect-github-myapp {
+    background: orange;
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex; /* Sử dụng flexbox để căn giữa */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    text-align: center; /* Căn giữa nội dung văn bản */
+}
+.chat-content2-2-myapp-middle button {
+  height: 30px;
+  width: 100px;
+  border-radius: 5px; /* Correctly applying border-radius */
+  border: 2px solid orange; /* Apply border color and style */
+  background-color: white; /* Optional: Set background color */
+  color: black; /* Optional: Set text color */
+  cursor: pointer; /* Optional: Change cursor on hover */
+  font-size: 14px; /* Optional: Set font size */
+}
+
+.connect-github-myapp {
+  background: orange;
+  width: 250px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex; /* Use flexbox to align content */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  text-align: center; /* Center text */
+}
+
+.input-content2-myapp-middle{
+  flex-grow: 1;
+}
+
+
+.search-bar2 {
+  display: flex;
+  align-items: center;
+  border: 2px solid #F8B133;
+  border-radius: 5px;
+  padding: 5px;
+  width: auto;
+  max-width: 1500px;
+  height: 70px;
+  
+  .search-icon2 {
+      font-size: 20px;
+      margin-right: 10px;
+      color: #000;
+  }
+    
+  .search-input2 {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 16px;
+  }
+    
+  .search-input2::placeholder {
+      color: #888;
+  }
+}
+.reply-myapp{
+  display: flex;
+  gap: 5px;
+}
+  .myapp-right {
+  width: 5%;
+  background: #fff4e0;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid orange;
+  
+  }
+  
