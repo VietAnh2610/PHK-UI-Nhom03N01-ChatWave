@@ -36,14 +36,21 @@ export default function Login() {
 
   const validateForm = () => {
     const { email, password } = values;
-    if (email === "") {
-      toast.error("Email là bắt buộc.", toastOptions);
-      return false;
-    } else if (password === "") {
-      toast.error("Mật khẩu là bắt buộc.", toastOptions);
-      return false;
+    let isValid = true;
+
+    // Kiểm tra trường email
+    if (!email) {
+      toast.error("Email không được để trống", toastOptions);
+      isValid = false;
     }
-    return true;
+
+    // Kiểm tra trường mật khẩu
+    if (!password) {
+      toast.error("Mật khẩu không được để trống", toastOptions);
+      isValid = false;
+    }
+
+    return isValid;
   };
 
   const handleSubmit = async (event) => {
@@ -100,6 +107,7 @@ export default function Login() {
                   <input
                     type="email"
                     name="email"  
+                    placeholder="Email" 
                     onChange={handleChange}
                     onFocus={() => handleFocus("email")}
                     onBlur={() => handleBlur("email")}
@@ -114,6 +122,7 @@ export default function Login() {
                   <input
                     type={showPassword ? "text" : "password"}
                     name="password"
+                    placeholder="Mật khẩu"
                     onChange={handleChange}
                     onFocus={() => handleFocus("password")}
                     onBlur={() => handleBlur("password")}

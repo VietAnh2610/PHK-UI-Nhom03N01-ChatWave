@@ -149,6 +149,7 @@ export default function Register() {
                   <input
                     type="text"
                     name="username"
+                    placeholder="Tên người dùng"
                     value={values.username}
                     onChange={handleChange}
                     onFocus={() => handleFocus("username")}
@@ -168,6 +169,7 @@ export default function Register() {
                   <input
                     type="text"
                     name="email"
+                    placeholder="Email"
                     value={values.email}
                     onChange={handleChange}
                     onFocus={() => handleFocus("email")}
@@ -185,6 +187,7 @@ export default function Register() {
                   <input
                     type="text"
                     name="phone"
+                    placeholder="Số điện thoại"
                     value={values.phone}
                     onChange={handleChange}
                     onFocus={() => handleFocus("phone")}
@@ -202,6 +205,7 @@ export default function Register() {
                   <input
                     type={showPassword ? "text" : "password"}
                     name="password"
+                    placeholder="Mật khẩu"
                     value={values.password}
                     onChange={handleChange}
                     onFocus={() => handleFocus("password")}
@@ -227,6 +231,7 @@ export default function Register() {
                   <input
                     type={showconfirmPassword ? "text" : "password"}
                     name="confirmPassword"
+                    placeholder="Nhập lại mật khẩu"
                     value={values.confirmPassword}
                     onChange={handleChange}
                     onFocus={() => handleFocus("confirmPassword")}
@@ -250,7 +255,7 @@ export default function Register() {
                 </div>
 
                 <button className="button button-signIn" type="submit">
-                  Đăng kí
+                  Đăng ký
                 </button>
                 <div style={{ fontSize: 20, marginTop: 20 }}>
                   Bạn đã có tài khoản?

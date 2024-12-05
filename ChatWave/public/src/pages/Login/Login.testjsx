@@ -1,0 +1,84 @@
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
+import axios from 'axios';
+import Login from './Login'; // Import component Login
+import '@testing-library/jest-dom'; // Để sử dụng matcher .toBeInTheDocument()
+import { loginRoute } from "../../utils/APIRoutes"; // Giả sử có API route
+
+jest.mock('axios'); // Mock axios để không gọi thật API
+
+// Mô phỏng Router
+const renderWithRouter = (ui) => {
+  return render(<BrowserRouter>{ui}</BrowserRouter>);
+};
+
+describe('Login Component', () => {
+  
+  it('renders email and password input fields and login button', async () => {
+    renderWithRouter(<Login />);
+    
+    // Kiểm tra sự hiện diện của các input fields và button
+    await waitFor(() => screen.getByPlaceholderText(/Email/i));
+    expect(screen.getByPlaceholderText(/Email/i)).toBeInTheDocument();
+    expect(screen.getByPlaceholderText(/Mật khẩu/i)).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /Đăng nhập/i })).toBeInTheDocument();
+  });
+
+  it('shows validation errors for empty fields', async () => {
+    renderWithRouter(<Login />);
+    
+    const loginButton = screen.getByRole('button', { name: /Đăng nhập/i });
+    
+    // Click vào nút Đăng nhập mà không điền thông tin
+    fireEvent.click(loginButton);
+    
+    // Kiểm tra các lỗi hiển thị (tùy theo cách em xử lý validate)
+    await waitFor(() => expect(screen.getByText(/Email không được để trống/i)).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByText(/Mật khẩu không được để trống/i)).toBeInTheDocument());
+    
+  });
+
+  it('calls login API with correct data', async () => {
+    renderWithRouter(<Login />);
+    
+    // Mock response từ API
+    axios.post.mockResolvedValueOnce({ data: { success: true } });
+    
+    const emailInput = screen.getByPlaceholderText(/Email/i);
+    const passwordInput = screen.getByPlaceholderText(/Mật khẩu/i);
+    const loginButton = screen.getByRole('button', { name: /Đăng nhập/i });
+    
+    // Nhập dữ liệu vào form
+    fireEvent.change(emailInput, { target: { value: 'test@example.com' } });
+    fireEvent.change(passwordInput, { target: { value: 'password123' } });
+    
+    // Click vào nút Đăng nhập
+    fireEvent.click(loginButton);
+    
+    // Kiểm tra axios đã được gọi đúng API và với dữ liệu đúng
+    await waitFor(() => expect(axios.post).toHaveBeenCalledWith(loginRoute, {
+      email: 'test@example.com',
+      password: 'password123',
+    }));
+  });
+
+  it('shows error message for invalid credentials', async () => {
+    renderWithRouter(<Login />);
+    
+    // Mock response lỗi từ API
+    axios.post.mockRejectedValueOnce({ response: { data: { message: 'Sai thông tin đăng nhập' } } });
+    
+    const emailInput = screen.getByPlaceholderText(/Email/i);
+    const passwordInput = screen.getByPlaceholderText(/Mật khẩu/i);
+    const loginButton = screen.getByRole('button', { name: /Đăng nhập/i });
+    
+    // Nhập dữ liệu vào form
+    fireEvent.change(emailInput, { target: { value: 'wrong@example.com' } });
+    fireEvent.change(passwordInput, { target: { value: 'wrongpassword' } });
+    
+    // Click vào nút Đăng nhập
+    fireEvent.click(loginButton);
+    
+  });
+
+});

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Messages = require("../models/messageModel");
-const upload = require('../upload'); // Import Multer middleware
+const upload = require("../upload"); // Import Multer middleware
 
 // Lấy tin nhắn giữa 2 người
 module.exports.getMessages = async (req, res) => {
@@ -9,15 +9,20 @@ module.exports.getMessages = async (req, res) => {
     console.log("Query parameters:", { from, to });
 
     // Kiểm tra giá trị của from và to có hợp lệ hay không
-    if (!mongoose.Types.ObjectId.isValid(from) || !mongoose.Types.ObjectId.isValid(to)) {
-      return res.status(400).json({ message: "Invalid 'from' or 'to' ObjectId" });
+    if (
+      !mongoose.Types.ObjectId.isValid(from) ||
+      !mongoose.Types.ObjectId.isValid(to)
+    ) {
+      return res
+        .status(400)
+        .json({ message: "Invalid 'from' or 'to' ObjectId" });
     }
 
     const messages = await Messages.find({
       $or: [
         { from, to },
-        { from: to, to: from }
-      ]
+        { from: to, to: from },
+      ],
     }).sort({ createdAt: 1 });
 
     console.log("Messages found:", messages);
@@ -28,10 +33,14 @@ module.exports.getMessages = async (req, res) => {
       };
     });
 
+    console.log("Projected messages:", projectedMessages);
+
     res.json(projectedMessages);
   } catch (error) {
     console.error("Error retrieving messages:", error);
-    res.status(500).json({ message: "Error retrieving messages", error });
+    res
+      .status(500)
+      .json({ message: "Error retrieving messages", error: error.message });
   }
 };
 
@@ -39,8 +48,11 @@ module.exports.getMessages = async (req, res) => {
 module.exports.addMessage = async (req, res, next) => {
   try {
     const { from, to, text, media } = req.body; // Thêm trường media
+    if (!from || !to || !text) {
+      return res.status(400).json({ msg: "Missing required fields" });
+    }
     const data = await Messages.create({
-      message: { text: text, media: media }, // Cập nhật thêm trường media
+      message: { text: text, media: media || null }, // Cập nhật thêm trường media
       from: from,
       to: to,
     });
@@ -49,7 +61,10 @@ module.exports.addMessage = async (req, res, next) => {
     else return res.json({ msg: "Failed to add message to the database" });
   } catch (ex) {
     console.error("Error adding message:", ex);
-    next(ex);
+    return res.status(500).json({
+      msg: "Failed to add message to the database",
+      error: ex.message,
+    }); // Đảm
   }
 };
 
@@ -57,7 +72,9 @@ module.exports.addMessage = async (req, res, next) => {
 module.exports.uploadMedia = async (req, res) => {
   try {
     if (!req.file) {
-      return res.status(400).json({ message: "Không có file nào được tải lên." });
+      return res
+        .status(400)
+        .json({ message: "Không có file nào được tải lên." });
     }
 
     // Đường dẫn đến file đã tải lên
